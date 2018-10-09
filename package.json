@@ -12,12 +12,12 @@
     "buildsInSource": "_build"
   },
   "dependencies": {
-      "@bryphe/esy-cmake": "*"
+      "esy-cmake": "*"
   },
   "resolutions": {
-      "@bryphe/esy-cmake": "github:bryphe/esy-cmake#5a40a8e"
+      "esy-cmake": "github:bryphe/esy-cmake#5a40a8e"
   },
   "devDependencies": {
-      "@bryphe/esy-cmake": "*"
+      "esy-cmake": "*"
   }
 }
