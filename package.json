@@ -11,9 +11,6 @@
     ],
     "buildsInSource": "_build"
   },
-  "dependencies": {
-      "@bryphe/esy-cmake": "*"
-  },
   "resolutions": {
       "@bryphe/esy-cmake": "github:bryphe/esy-cmake#ce77f48"
   },
