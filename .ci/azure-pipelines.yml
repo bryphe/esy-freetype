@@ -18,7 +18,7 @@ jobs:
   - template: esy-build-steps.yml
 
 # Exercise harfbuzz dependency
-- job: MacOS w/ harfbuzz
+- job: MacOS with harfbuzz
   pool:
     vmImage: 'macOS 10.13'
   steps:
