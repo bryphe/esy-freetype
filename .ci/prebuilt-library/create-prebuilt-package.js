@@ -9,7 +9,7 @@ const path = require("path");
 const rootDir = path.join(__dirname, "..", "..")
 
 console.log("Creating package.json");
-const mainPackageJson = require(path.join(rootDir, "package.json");
+const mainPackageJson = require(path.join(rootDir, "package.json"))
 const packageJson = JSON.stringify(
     {
         name: mainPackageJson.name + "-prebuilt",
@@ -36,7 +36,7 @@ const packageJson = JSON.stringify(
 );
 
 fs.writeFileSync(
-  path.join(rootDir, "_release", "package.json")),
+  path.join(rootDir, "_release", "package.json"),
   packageJson, 
   {
     encoding: "utf8"
