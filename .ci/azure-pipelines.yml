@@ -52,8 +52,20 @@ jobs:
   pool:
      vmImage: ubuntu-16.04
   steps:
+    - template: prebuilt-library/download-platform-prebuilt.yml
+      parameters:
+          platform: "platform-linux"
+
+    - template: prebuilt-library/download-platform-prebuilt.yml
+      parameters:
+          platform: "platform-win32"
+
+    - template: prebuilt-library/download-platform-prebuilt.yml
+      parameters:
+          platform: "platform-darwin"
+
     - task: PublishBuildArtifacts@1
       displayName: 'Release Package'
       inputs:
-          PathtoPublish: '.'
+          PathtoPublish: '_release'
           ArtifictName: npm-package
