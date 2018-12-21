@@ -7,4 +7,4 @@ steps:
     displayName: "Publish Artifact: ${{ parameters.platform }}"
     inputs:
       PathToPublish: "_prebuilt"
-      ArtifactName: ${{ parameters.paltform }}
+      ArtifactName: ${{ parameters.platform }}
