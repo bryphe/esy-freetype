@@ -8,5 +8,5 @@ steps:
     displayName: "Download ${{ parameters.platform }} Artifacts"
     inputs:
       artifactName: ${{ parameters.platform }}
-      downloadPath: "_release/${{ parameters.platform }}"
+      downloadPath: "_release"
 
