@@ -65,7 +65,7 @@ jobs:
       parameters:
           platform: "platform-darwin"
 
-    - script: node .ci/prebuilt-library/create-prebuilt-package.js.js
+    - script: node .ci/prebuilt-library/create-prebuilt-package.js
 
     - task: PublishBuildArtifacts@1
       displayName: 'Release Package'
