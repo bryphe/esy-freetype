@@ -67,6 +67,10 @@ jobs:
 
     - script: node .ci/prebuilt-library/create-prebuilt-package.js
 
+    - script: "npm pack"
+      displayName: "npm pack"
+      workingDirectory: "_release"
+
     - task: PublishBuildArtifacts@1
       displayName: 'Release Package'
       inputs:
