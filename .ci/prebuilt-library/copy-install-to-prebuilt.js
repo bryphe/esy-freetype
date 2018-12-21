@@ -46,7 +46,6 @@ function copyRecursive(srcDir, dstDir) {
 }
 
 var rootDir = path.join(__dirname, "..", "..");
-console.log("ROOTDIR: " + rootDir);
 
 var buildEnv = cp.execSync("esy build-env --json", { cwd: rootDir });
 var buildEnvAsString = buildEnv.toString("utf8");

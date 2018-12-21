@@ -52,27 +52,4 @@ jobs:
   pool:
      vmImage: ubuntu-16.04
   steps:
-    - script: "mkdir _release"
-    - template: prebuilt-library/download-platform-prebuilt.yml
-      parameters:
-          platform: "platform-linux"
-
-    - template: prebuilt-library/download-platform-prebuilt.yml
-      parameters:
-          platform: "platform-win32"
-
-    - template: prebuilt-library/download-platform-prebuilt.yml
-      parameters:
-          platform: "platform-darwin"
-
-    - script: node .ci/prebuilt-library/create-prebuilt-package.js
-
-    - script: "npm pack"
-      displayName: "npm pack"
-      workingDirectory: "_release"
-
-    - task: PublishBuildArtifacts@1
-      displayName: 'Release Package'
-      inputs:
-          PathtoPublish: '_release'
-          ArtifactName: prebuilt-npm-package
+    - template: prebuilt-library-release.yml
