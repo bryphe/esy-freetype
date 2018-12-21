@@ -29,6 +29,7 @@ const packageJson = JSON.stringify(
             exportedEnv: exportedEnv,
         },
         files: [
+            "postinstall.js",
             "platform-linux/",
             "platform-darwin/",
             "platform-win32/"
