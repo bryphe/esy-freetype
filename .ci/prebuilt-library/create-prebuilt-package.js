@@ -36,7 +36,7 @@ const packageJson = JSON.stringify(
 );
 
 fs.writeFileSync(
-  path.join(rootDir, "_release", "package.json"),
+  path.join(rootDir, "_release", "package.json")),
   packageJson, 
   {
     encoding: "utf8"
