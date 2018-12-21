@@ -2,7 +2,7 @@ parameters:
   platform: "win32"
 
 steps:
-  - script: node prebuilt-library/copy-install-to-prebuilt.js
+  - script: node .ci/prebuilt-library/copy-install-to-prebuilt.js
   - task: PublishBuildArtifacts@1
     displayName: "Publish Artifact: ${{ parameters.platform }}"
     inputs:
