@@ -9,7 +9,8 @@ const path = require("path");
 const rootDir = path.join(__dirname, "..", "..")
 
 console.log("Creating package.json");
-const mainPackageJson = require(path.join(rootDir, "package.json"))
+const mainPackageJson = require(path.join(rootDir, "package.json"));
+const exportedEnv = mainPackageJson["esy"].exportedEnv || {};
 const packageJson = JSON.stringify(
     {
         name: mainPackageJson.name + "-prebuilt",
@@ -24,6 +25,7 @@ const packageJson = JSON.stringify(
             build: [
                 "cp _prebuilt/* $cur__install"
             ],
+            exportedEnv: exportedEnv,
         },
         files: [
             "platform-linux/",
