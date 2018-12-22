@@ -24,7 +24,8 @@ const packageJson = JSON.stringify(
         },
         esy: {
             build: [
-                "cp _prebuilt/* $cur__install"
+                "cp -r _prebuilt/. $cur__install/"
+                "echo Installed $cur__name to $cur__install"
             ],
             exportedEnv: exportedEnv,
         },
