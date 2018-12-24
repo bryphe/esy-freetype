@@ -56,3 +56,4 @@ fs.copyFileSync(
   path.join(__dirname, "copy-prebuilts.sh"),
   path.join(rootDir, "_release", "copy-prebuilts.sh")
 );
+fs.chmodSync(path.join(rootDir, "_release", "copy-prebuilts.sh"), 0o755);
