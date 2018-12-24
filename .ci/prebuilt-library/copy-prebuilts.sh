@@ -4,19 +4,16 @@ set -e
 set -u
 set -o pipefail
 
-TARGET=_prebuilt/
-mkdir -p $TARGET
-
 case $(uname) in
     Darwin*)
-    mv platform-darwin/* $TARGET
+    cp -r $cur__root/platform-darwin/. $cur__install/
     ;;
     Linux*)
-    mv platform-linux/* $TARGET
+    cp -r $cur__root/platform-linux/. $cur__install/
     ;;
     *)
-    mv platform-win32/* $TARGET
+    cp -r $cur__root/platform-win32/. $cur__install/
     ;;
 esac
 
-echo Installed $cur__name to $TARGET
+echo Installed $cur__name to $cur__install
