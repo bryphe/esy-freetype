@@ -5,8 +5,8 @@
   "license": "MIT",
   "esy": {
     "build": [
-        ["bash", "-c", "#{os == 'windows' ? 'skipping freetype configure on windows' : './esy/configure.sh'}"],
-        ["bash", "-c", "#{os == 'windows' ? 'skipping freetype build on windows' : './esy/build.sh'}"],
+        ["bash", "-c", "#{os == 'windows' ? 'echo \"skipping-configure\"' : './esy/configure.sh'}"],
+        ["bash", "-c", "#{os == 'windows' ? 'echo \"skipping-build\"' : './esy/build.sh'}"]
     ],
     "buildsInSource": "_build",
     "exportedEnv": {
